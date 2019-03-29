@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import HomeContainer from '../Home/HomeContainer';
+import MovieContainer from '../Movie/MovieContainer';
+import './App.css';
 
 const App = () => (
   <Router>
@@ -9,11 +11,12 @@ const App = () => (
         <ul>
           <li>
             <Link to="/">Home</Link>
-          </li>
+          </li>  
         </ul>
       </nav>
       <div className="App">
         <Route exact path="/" component={HomeContainer} />
+        <Route exact path="/movie/:id" component={MovieContainer} />
       </div>
     </div>
   </Router>
